@@ -2,12 +2,65 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+    <title>Weather App</title>
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
+    <header class="weather_wrapper">
+      <p class="weather_wrapper weather_title text-align-cen">Forecast Weather App</p>
+    </header>
+    <main class="weather_wrapper">
+      <section class="weather_container-1">
+        <img class="weather_container-image" src="/src/images/Day.jpg" alt="Daylight">
+      </section>
+
+      <!-- SEARCH BAR SECTION -->
+      <section class="weather_wrapper grid-special">
+        <section class="flex-space-end">
+          <input type="text" class="weather_searchBar">
+          <button class="weather_button">Search</button>
+        </section>
+
+        <!-- F / C BUTTON -->
+        <section class="flex-space-end flex-center-ver">
+          <p class="weather_button-text">°F</p>
+          <label class="weather_switch">
+            <input class="weather_input" type="checkbox">
+            <span class="weather_slider weather_slider-round"></span>
+          </label>
+          <p class="weather_button-text">°C</p>
+        </section>
+      </section>
+
+      <!-- CITY TITLE -->
+      <section class="weather_container-2 weather_body weather_hidden">
+        
+        <section class="weather_container-sec ">
+            <h1 class="weather_city weather_title text-align-start"></h1>
+            <p class="weather_temp weather_title text-align-end"></p>
+            <p class="weather_date text-align-start"></p>
+            <p class="weather_temp-feelsLike text-align-end"></p>
+            <p class="weather_time"></p>
+        </section>
+        <!-- <br> -->
+        <p class="weather_subTitle mgn-t">Weather Condition</p>
+        <hr>
+        <p class="weather_sky grid-col"></p>
+        <p class="weather_humidity grid-col"></p>
+        <!-- <br> -->
+        <p class="weather_subTitle mgn-t">Wind Condition</p>
+        <hr>
+        <p class="weather_wind grid-col"></p>
+        <p class="weather_wind-gust grid-col"></p>
+        <p class="weather_wind-speed grid-col"></p>
+
+      </section>
+    </main>
+
+
+    <script type="module" src="./js/index.js"></script>
   </body>
 </html>

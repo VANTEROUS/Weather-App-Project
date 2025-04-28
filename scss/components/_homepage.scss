@@ -1,0 +1,11 @@
+@use '../utilities/' as u;
+
+
+.weather_title {
+    font-weight: bold;
+    font-size: var(--f-m);
+}
+.weather_subTitle {
+    font-weight: bold;
+    font-size: var(--f-s);
+}
