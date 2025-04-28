@@ -23,6 +23,6 @@ app.get('/weather', async (req, res) => {
 });
 
 
-app.listen(3000, function(){
+app.listen(process.env.PORT || 3000, function(){
     console.log('CORS Enabled on port 3000')
 })
